@@ -3,3 +3,27 @@
 @import url(./a11y.css);
 @import url(./theme.css);
 @import url(./base.css);
+
+/* 공통 스타일 */
+
+body {
+  background: var(--orange);
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  body {
+    background: var(--blue);
+  }
+}
+
+/* 중단점 -769px 이상 */
+
+@media (min-width: 769px) {
+  body {
+    background: var(--green);
+  }
+}
+
+.news__videoContainer {
+  width: 50%;
+}
