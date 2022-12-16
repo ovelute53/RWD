@@ -24,7 +24,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  background: url(./../images/webcafe-logo.png) no-repeat 0 0/100%;
+  background: url(./../images/webcafe-logo.png) no-repeat 0 0/100% 100%;
 }
 
 /* 공통 멤버서비스 */
@@ -43,7 +43,6 @@ input[type="search"] {
 .searchForm__group {
   display: flex;
   flex-flow: row nowrap;
-  /* justify-content: flex-end; */
 }
 
 .searchForm__group .formInput {
@@ -64,8 +63,7 @@ input[type="search"] {
   height: 2rem;
   border-radius: 0.25rem;
   padding: var(--spacing-sxxs) var(--spacing-sm);
-  flex-shrink: 0;
-  /* flex: 0 0 auto; */
+  flex: 0 0 auto;
   font-size: var(--text-sm);
 }
 
@@ -107,26 +105,53 @@ input[type="search"] {
   }
 
   /* 모바일 메뉴 제어 버튼 시작 */
+
   .buttonWrapper {
     background: gold;
+    overflow: hidden;
   }
 
   .button--burger {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background: blue;
+    position: relative;
   }
 
-  [class*=".button--burgerBar"] {
+  [class*="button--burgerBar"] {
     background: var(--white);
+    width: 100%;
+    height: 20%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    transition: all 200ms;
   }
 
   .button--burgerBarTop {
+    top: 0;
   }
   .button--burgerBarMiddle {
+    top: 50%;
+    transform: translateY(-50%);
   }
-  .button--burgerBarButton {
+  .button--burgerBarBottom {
+    top: 100%;
+    transform: translateY(-100%);
   }
+
+  .is--active .button--burgerBarTop {
+    top: 50%;
+    transform: translate(0%, -50%) rotate(-45deg);
+  }
+  .is--active .button--burgerBarMiddle {
+    transform: translate(-100%, -50%);
+  }
+  .is--active .button--burgerBarBottom {
+    top: 50%;
+    transform: translate(0%, -50%) rotate(45deg);
+  }
+
   /* 모바일 메뉴 제어 버튼 종료 */
 }
 
@@ -137,6 +162,7 @@ input[type="search"] {
     max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
+    background-color: gold;
   }
 
   /* 데스크탑 로고 */
