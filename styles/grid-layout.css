@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.group1 {
+  background: gold;
+}
+.group2 {
+  background: pink;
+}
+.group3 {
+  background: lightgreen;
+}
+.group4 {
+  background: skyblue;
+}
+.group5 {
+  background: salmon;
+}
+/* .group6 {
+  background: violet;
+}
+.group7 {
+  background: aquamarine;
+}
+.group8 {
+  background: lightseagreen;
+}
+.group9 {
+  background: MediumPurple;
+}
+.group10 {
+  background: MidnightBlue;
+}
+.group11 {
+  background: Olive;
+}
+.group12 {
+  background: SandyBrown;
+} */
+
+/* 공통 레이아웃 */
+.container {
+  border: 5px solid red;
+  margin: 50px;
+  display: grid;
+  gap: 24px;
+  grid-template-rows: repeat(3, 200px);
+}
+
+.group1 {
+  grid-area: box1;
+}
+.group2 {
+  grid-area: box2;
+}
+.group3 {
+  grid-area: box3;
+}
+.group4 {
+  grid-area: box4;
+}
+.group5 {
+  grid-area: box5;
+}
+/* 모바일 레이아웃 */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "box1 box2"
+      "box1 box3"
+      "box4 box5";
+  }
+}
+/* 데스크탑 레이아웃 */
+@media (min-width: 769px) {
+  .container {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "box2 box2 box2 box2 box2 box2 box2 box2 box2 box2 box2 box2"
+      "box1 box1 box1 box1 box3 box3 box3 box3 box3 box4 box4 box4"
+      "box1 box1 box1 box1  .    box5 box5 box5 box5 box5 box5 box5";
+  }
+}
