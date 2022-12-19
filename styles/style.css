@@ -99,6 +99,39 @@ input[type="search"] {
   padding: var(--spacing-base) var(--spacing-lg);
 }
 
+/* 공통 메인 컨텐츠 섹션 제목 */
+[class*="__title"] {
+  margin-bottom: var(--spacing-base);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+[class*="__koTitle"] {
+  font-size: var(--text-md);
+  font-weight: 700;
+}
+
+.sprite {
+  /* color: white; */
+  background: url(../images/sprite_main.png) no-repeat;
+  height: 3.75rem;
+  padding-left: 4rem;
+}
+
+.spriteNews {
+  background-position: 0% 40%;
+}
+.spriteBoard {
+  background-position: 0% 20%;
+}
+.spriteFavorite {
+  background-position: 0% 60%;
+}
+.spriteTwitter {
+  background-position: 0% 80%;
+}
+
 /* 공통 추천서적 */
 .book {
   background-color: yellow;
