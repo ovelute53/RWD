@@ -132,25 +132,41 @@ input[type="search"] {
   background-position: 0% 80%;
 }
 
+.accentBook {
+  color: var(--accent-book);
+}
+.accentNews {
+  color: var(--accent-news);
+}
+.accentBoard {
+  color: var(--accent-board);
+}
+.accentFavorite {
+  color: var(--accent-favorite);
+}
+.accentTwitter {
+  color: var(--accent-twitter);
+}
+
 /* 공통 추천서적 */
 .book {
-  background-color: yellow;
+  /* background-color: yellow; */
   grid-area: book;
 }
 .news {
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
   grid-area: news;
 }
 .board {
-  background-color: lightsalmon;
+  /* background-color: lightsalmon; */
   grid-area: board;
 }
 .favorite {
-  background-color: skyblue;
+  /* background-color: skyblue; */
   grid-area: favorite;
 }
 .twitter {
-  background-color: burlywood;
+  /* background-color: burlywood; */
   grid-area: twitter;
 }
 
