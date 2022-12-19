@@ -102,18 +102,23 @@ input[type="search"] {
 /* 공통 추천서적 */
 .book {
   background-color: yellow;
+  grid-area: book;
 }
 .news {
   background-color: lightgreen;
+  grid-area: news;
 }
 .board {
   background-color: lightsalmon;
+  grid-area: board;
 }
 .favorite {
   background-color: skyblue;
+  grid-area: favorite;
 }
 .twitter {
   background-color: burlywood;
+  grid-area: twitter;
 }
 
 /* 모바일 디바이스 (Mobile Device) */
@@ -223,13 +228,14 @@ input[type="search"] {
 
   /* 모바일 메인 콘텐츠 */
   .appMain {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
-  }
-
-  /* 모바일 새소식 */
-  .news {
-    grid-area: 1/1/2/3;
+    grid-template-areas:
+      "book"
+      "news"
+      "board"
+      "favorite"
+      "twitter";
   }
 }
 
@@ -290,24 +296,14 @@ input[type="search"] {
 
   /* 데스크탑 메인 컨텐츠 */
   .appMain {
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-  }
-  .book {
-    grid-area: 2/1/4/5;
-  }
-  .news {
-    grid-column: 1/13;
-    grid-row: 1/2;
-  }
-  .board {
-    grid-area: 3/6/4/13;
-  }
-  .favorite {
-    grid-area: 2/5/3/10;
-  }
-  .twitter {
-    grid-area: 2/10/3/13;
+    grid-template-areas:
+      "news news news news news news news news news news news news"
+      "book book book book twitter twitter twitter twitter twitter favorite favorite favorite"
+      "book book book book . board board board board board board board";
   }
 }
 
