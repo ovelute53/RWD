@@ -211,6 +211,7 @@ input[type="search"] {
   grid-area: board;
   display: flex;
   flex-flow: row wrap;
+  overflow: hidden;
 }
 
 .board__title{
@@ -223,6 +224,7 @@ input[type="search"] {
   display: flex;
   flex-flow: column nowrap;
   gap: var(--spacing-sm);
+  width: 100%;
 }
 .board__item{
   display: flex;
@@ -232,7 +234,7 @@ input[type="search"] {
 
 .board__link{
   flex: 0 1 auto;
-  /* white-space: nowrap; */
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: calc(100% - 6.25rem);
@@ -377,7 +379,19 @@ input[type="search"] {
       "favorite"
       "twitter";
   }
+
+  /* 모바일 인기사이트 */
+  .favorite {
+    margin-top: var(--spacing-base);
+    }
+
+  .favorite__link::after {
+    content: attr(data-tooltip);
+    color: var(--accent-favorite);
+    font-size: var(--text-sm);
+    margin-left: var(--spacing-xs);
 }
+
 
 /* 데스크탑 디바이스 (Desktop Device) */
 @media (min-width: 769px) {
