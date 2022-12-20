@@ -231,15 +231,16 @@ input[type="search"] {
 
 
 .board__link{
-  flex: 1 1 auto;
-  white-space: nowrap;
+  flex: 0 1 auto;
+  /* white-space: nowrap; */
   overflow: hidden;
   text-overflow: ellipsis;
-
+  width: calc(100% - 6.25rem);
 }
 .board__date{
   flex: 0 0 auto;
-
+  width: 6.25rem;
+  text-align: right;
 }
 .board__more{
   padding-top: var(--spacing-sm);
