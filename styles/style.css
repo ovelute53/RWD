@@ -214,6 +214,41 @@ input[type="search"] {
   text-align: right;
 }
 
+/* 공통 게시판 */
+.board {
+  /* background-color: yellow; */
+  grid-area: board;
+  position: relative;
+}
+
+.board__title {
+  /* background-color: salmon; */
+}
+.board__list {
+  /* background-color: lightgreen; */
+}
+.board__item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  white-space: nowrap;
+  line-height: 2;
+}
+.board__link {
+  overflow: hidden;
+}
+.board__date {
+  display: block;
+  margin-left: 10px;
+}
+.board__more {
+  /* background-color: lightblue; */
+  position: absolute;
+  padding: 8px;
+  top: 0;
+  right: 0;
+}
+
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
   /* 모바일 헤더 */
