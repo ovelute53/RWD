@@ -174,13 +174,26 @@ input[type="search"] {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  background-color: yellow;
   text-align: center;
 }
 
 .book__coverCaption {
   margin-top: var(--spacing-sm);
   line-height: 1.6;
+}
+
+.book__info {
+  margin-top: var(--spacing-base);
+  text-align: center;
+}
+
+.book__info * {
+  display: inline;
+}
+
+.ratingStar {
+  display: block;
+  font-size: var(--text-xl);
 }
 
 /* 모바일 디바이스 (Mobile Device) */
