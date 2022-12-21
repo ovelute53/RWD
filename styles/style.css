@@ -7,7 +7,8 @@
 /* 모든 디바이스 (All Device) */
 
 /* 공통 아이콘 (Font Awesome) */
-.far, .fas {
+.far,
+.fas {
   margin-right: var(--spacing-xs);
 }
 
@@ -106,53 +107,53 @@ input[type="search"] {
 }
 
 /* 공통 메인 콘텐츠 섹션 제목 */
-.appMain [class*="__title"]{
+.appMain [class*="__title"] {
   margin-bottom: var(--spacing-base);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
 }
 
-.appMain [class*="__koTitle"]{
+.appMain [class*="__koTitle"] {
   font-size: var(--text-md);
   font-weight: 700;
 }
 
-.sprite{
+.sprite {
   background: url("./../images/sprite_main.png") no-repeat;
   height: 3.75rem;
   padding-left: 4rem;
 }
 
-.spriteBook{
+.spriteBook {
   background-position: 0 0;
 }
-.spriteNews{
+.spriteNews {
   background-position: 0 -230px;
 }
-.spriteBoard{
+.spriteBoard {
   background-position: 0 -115px;
 }
-.spriteFavorite{
+.spriteFavorite {
   background-position: 0 -345px;
 }
-.spriteTwitter{
+.spriteTwitter {
   background-position: 0 -460px;
 }
 
-.accentBook{
+.accentBook {
   color: var(--accent-book);
 }
-.accentNews{
+.accentNews {
   color: var(--accent-news);
 }
-.accentBoard{
+.accentBoard {
   color: var(--accent-board);
 }
-.accentFavorite{
+.accentFavorite {
   color: var(--accent-favorite);
 }
-.accentTwitter{
+.accentTwitter {
   color: var(--accent-twitter);
 }
 
@@ -167,7 +168,7 @@ input[type="search"] {
   grid-area: book;
 }
 
-.book__cover{
+.book__cover {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -177,20 +178,20 @@ input[type="search"] {
   align-items: center; */
 }
 
-.book__coverCaption{
+.book__coverCaption {
   margin-top: var(--spacing-sm);
   line-height: 1.6;
 }
 
-.book__info{
+.book__info {
   text-align: center;
   margin-top: var(--spacing-base);
 }
-.book__info *{
+.book__info * {
   display: inline;
 }
 
-.ratingStar{
+.ratingStar {
   display: block;
   font-size: var(--text-xl);
 }
@@ -200,7 +201,7 @@ input[type="search"] {
   grid-area: news;
 }
 
-.news__date{
+.news__date {
   display: block;
   margin-top: var(--spacing-base);
   text-align: right;
@@ -214,40 +215,37 @@ input[type="search"] {
   overflow: hidden;
 }
 
-.board__title{
+.board__title {
   flex: 1 1 auto;
-  
 }
-.board__list{
+.board__list {
   order: 1;
-  flex:1 1 auto;
+  flex: 1 1 auto;
   display: flex;
   flex-flow: column nowrap;
   gap: var(--spacing-sm);
   width: 100%;
 }
-.board__item{
+.board__item {
   display: flex;
   flex-flow: row nowrap;
 }
 
-
-.board__link{
+.board__link {
   flex: 0 1 auto;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: calc(100% - 6.25rem);
 }
-.board__date{
+.board__date {
   flex: 0 0 auto;
   width: 6.25rem;
   text-align: right;
 }
-.board__more{
+.board__more {
   padding-top: var(--spacing-sm);
 }
-
 
 /* 공통 인기 사이트 */
 .favorite {
@@ -269,7 +267,7 @@ input[type="search"] {
   width: 25%;
   min-width: 3.125rem;
   max-width: 5.625rem;
-  shape-outside: circle(50%); 
+  shape-outside: circle(50%);
   aspect-ratio: 1/1;
   float: right;
   margin-left: var(--spacing-xs);
@@ -411,15 +409,15 @@ input[type="search"] {
   /* 모바일 인기사이트 */
   .favorite {
     margin-top: var(--spacing-base);
-    }
+  }
 
   .favorite__link::after {
     content: attr(data-tooltip);
     color: var(--accent-favorite);
     font-size: var(--text-sm);
     margin-left: var(--spacing-xs);
+  }
 }
-
 
 /* 데스크탑 디바이스 (Desktop Device) */
 @media (min-width: 769px) {
@@ -481,9 +479,11 @@ input[type="search"] {
     margin-right: auto;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
-    grid-template-areas: "news news news news news news news news news news news news"
-                         "book book book book twitter twitter twitter twitter twitter favorite favorite favorite"
-                         "book book book book . board board board board board board board";
+    grid-template-areas:
+      "news news news news news news news news news news news news"
+      "book book book book twitter twitter twitter twitter twitter favorite favorite favorite"
+      "book book book book . board board board board board board board";
+  }
 }
 
 /* 고해상도 배경이미지 미디어쿼리 */
